@@ -7,7 +7,32 @@ This Docker setup provides a containerized environment for ITSC 3146 coursework.
 - Configured for XWayland compatibility
 - Host Docker access enabled for Imunes functionality
 
+### Prerequisites
+
+**Arch Linux:**
+```bash
+sudo pacman -S docker docker-buildx xorg-xwayland xorg-xhost
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+newgrp docker
+xhost +local:docker
+```
+
 ### Getting Started
+
+
+**GitHub Personal Access Token:**
+1. Go to https://github.com/settings/tokens
+2. Generate new token (classic) with "repo" scope
+3. Copy the token
+
+**Environment Setup:**
+```bash
+echo "GITHUB_TOKEN=your_token_here" > login.env
+echo "GITHUB_USER=your_github_username" >> login.env
+echo "login.env" >> .gitignore
+```
 
 **Build the container:**
 ```bash
