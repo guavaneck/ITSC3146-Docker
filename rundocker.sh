@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo docker run --rm -it \
+  -v "$(pwd)/strg":/home/share \
   --name debian \
   --network host \
   -e XDG_RUNTIME_DIR=/tmp \

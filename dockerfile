@@ -7,6 +7,8 @@ ENV PATH="/opt/nvim/bin:$PATH"
 
 WORKDIR /home
 
+RUN mkdir share
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
