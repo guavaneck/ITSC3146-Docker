@@ -6,6 +6,7 @@ This Docker setup provides a containerized environment for ITSC 3146 coursework.
 ### Features
 - Configured for XWayland compatibility
 - Host Docker access enabled for Imunes functionality
+- Shared folder in the container that can be edited on the host computer
 
 ### Prerequisites
 
